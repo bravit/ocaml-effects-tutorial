@@ -283,7 +283,7 @@ function has one parameter: the value of the computation
 
 `exnc` is called when the computation throws an exception. It takes the exception as a parameter.
 
-`effc` is the function that handles the effects. It has type `'c. 'c Effect.t -> ('c, 'a) continuation -> 'b) option`
+`effc` is the function that handles the effects. It has type `'c. 'c Effect.t -> (('c, 'a) continuation -> 'b) option`
 
 Effects are strongly typed, but the handler function can handle multiple
 effects and has to be generic over every possible type (which is potentially
